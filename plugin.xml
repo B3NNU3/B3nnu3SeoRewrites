@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../engine/Shopware/Components/Plugin/schema/plugin.xsd">
+
+    <label lang="de">B3nnu3SeoRewrites</label>
+    <label lang="en">B3nnu3SeoRewrites</label>
+
+    <version>1.0.0</version>
+    <link>https://github.com/b3nnu3/B3nnu3SeoRewrites</link>
+    <author>Benjamin Schnoor</author>
+    <compatibility minVersion="5.2.0"/>
+    <description lang="de">Stellt eine eingabeMaske zur Verfügung um einfache rewriteRegeln anzulegen.</description>
+    <description lang="en">Provides an input mask available for applying simple rewriteRules.</description>
+    <license>The MIT License (MIT)</license>
+    <copyright>Copyright (c) 2016 Benjamin Schnoor</copyright>
+    <changelog version="1.0.0">
+        <changes lang="de">Veröffentlichung</changes>
+        <changes lang="en">Release</changes>
+    </changelog>
+</plugin>

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="B3nnu3_seorewrites.dbal_rewrite_gateway"
+                 class="B3nnu3SeoRewrites\Components\Services\DbalRewriteGateway">
+            <argument type="service" id="dbal_connection"/>
+        </service>
+
+        <service id="B3nnu3_seorewrites.subscriber.controller"
+                 class="B3nnu3SeoRewrites\Subscribers\ControllerSubscriber">
+            <argument>%b3nnu3_seorewrites.path%</argument>
+            <tag name="shopware.event_subscriber"/>
+        </service>
+
+        <service id="B3nnu3_seorewrites.subscriber.on_route_start_up"
+                 class="B3nnu3SeoRewrites\Subscribers\OnRouteStartUpSubscriber">
+            <argument type="service" id="B3nnu3_seorewrites.dbal_rewrite_gateway"/>
+            <tag name="shopware.event_subscriber"/>
+        </service>
+    </services>
+</container>
