@@ -32,12 +32,12 @@ class OnRouteStartUpSubscriber implements SubscriberInterface
         $request = $args->get('request');
         /** @var \Enlight_Controller_Response_ResponseHttp $response */
         $response = $args->get('response');
-        $uri = $this->rewriteGateway->getRewrite($request);
+        $rewrite = $this->rewriteGateway->getRewrite($request);
 
-        if (!$uri) {
+        if (!$rewrite) {
             return;
         }
-        $response->setRedirect($uri);
+        $response->setRedirect($rewrite->getToUri(), $rewrite->getType());
         $args->setProcessed(true);
         $request->setDispatched(true);
     }

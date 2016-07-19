@@ -9,11 +9,12 @@ Ext.define('Shopware.apps.SeoRewrite.model.Rewrite', {
         };
     },
 
-
     fields: [
         { name : 'id', type: 'int', useNull: true },
         { name : 'from', type: 'string', useNull: true },
-        { name : 'to', type: 'string', useNull: true }
+        { name : 'to', type: 'string', useNull: true },
+        { name : 'position', type: 'string', useNull: true },
+        { name : 'type', type: 'string', useNull: true }
     ]
 });
 

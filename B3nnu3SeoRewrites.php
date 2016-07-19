@@ -7,6 +7,7 @@ use B3nnu3SeoRewrites\Models\SeoRewrite;
 use Doctrine\ORM\Tools\SchemaTool;
 use Shopware\Components\Model\ModelManager;
 use \Shopware\Components\Plugin;
+use Shopware\Components\Plugin\Context\UpdateContext;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class B3nnu3SeoRewrites extends Plugin
@@ -24,6 +25,18 @@ class B3nnu3SeoRewrites extends Plugin
         ]);
         $this->initMenuBuilder()->createMenuEntry();
         parent::install($context);
+    }
+
+    public function update(UpdateContext $context)
+    {
+        // do not update schema update schma is the worst possible option.. it will kill ur db..
+        $this->initSchemaTool()->dropDatabase([
+            $this->initModelManager()->getClassMetadata(SeoRewrite::class)
+        ]);
+        $this->initSchemaTool()->createSchema([
+            $this->initModelManager()->getClassMetadata(SeoRewrite::class)
+        ]);
+        parent::update($context);
     }
 
     public function uninstall(Plugin\Context\UninstallContext $context)

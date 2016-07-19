@@ -3,9 +3,14 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
+        <service id="B3nnu3_seorewrites.dbal_rewrite_gateway_hydrator"
+                 class="B3nnu3SeoRewrites\Components\Services\Hydrator\RewriteHydrator">
+        </service>
+
         <service id="B3nnu3_seorewrites.dbal_rewrite_gateway"
                  class="B3nnu3SeoRewrites\Components\Services\DbalRewriteGateway">
             <argument type="service" id="dbal_connection"/>
+            <argument type="service" id="B3nnu3_seorewrites.dbal_rewrite_gateway_hydrator"/>
         </service>
 
         <service id="B3nnu3_seorewrites.subscriber.controller"

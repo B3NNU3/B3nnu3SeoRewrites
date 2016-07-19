@@ -5,7 +5,7 @@
     <label lang="de">B3nnu3SeoRewrites</label>
     <label lang="en">B3nnu3SeoRewrites</label>
 
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <link>https://github.com/b3nnu3/B3nnu3SeoRewrites</link>
     <author>Benjamin Schnoor</author>
     <compatibility minVersion="5.2.0"/>
@@ -16,5 +16,9 @@
     <changelog version="1.0.0">
         <changes lang="de">Veröffentlichung</changes>
         <changes lang="en">Release</changes>
+    </changelog>
+    <changelog version="1.0.1">
+        <changes lang="de">seo rewrite model erweitert + selectQuery um regex erweitert</changes>
+        <changes lang="en">updated rewrite model + add regex to selectQuery</changes>
     </changelog>
 </plugin>

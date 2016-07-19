@@ -21,7 +21,7 @@ class MenuBuilder
 
     public function createMenuEntry()
     {
-        $parentItem = 'Einstellungen';
+        $parentItem = 'Marketing';
 
         /** @var Menu $parent */
         $parent = $this->modelManager->getRepository('Shopware\\Models\\Menu\\Menu')->findOneBy(['label' => $parentItem]);
@@ -36,7 +36,7 @@ class MenuBuilder
         $item->setClass('sprite-ui-scroll-pane-detail');
         $item->setLabel('SeoRewriteTool');
         $item->setParent($parent);
-        $item->setController('Seorewrites');
+        $item->setController('SeoRewrite');
         $item->setPosition(99);
 
         $this->modelManager->persist($item);

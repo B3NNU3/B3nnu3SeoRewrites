@@ -37,6 +37,20 @@ class SeoRewrite extends ModelEntity
     private $to;
 
     /**
+     * @var int $position
+     *
+     * @ORM\Column(name="position", type="integer", length=11, nullable=false)
+     */
+    private $position = 0;
+
+    /**
+     * @var int $type
+     *
+     * @ORM\Column(name="type", type="integer", length=3, nullable=false)
+     */
+    private $type = 301;
+
+    /**
      * @return int
      */
     public function getId()
@@ -74,5 +88,37 @@ class SeoRewrite extends ModelEntity
     public function setFrom($from)
     {
         $this->from = $from;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    /**
+     * @param int $position
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+    }
+
+    /**
+     * @return int
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param int $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
     }
 }
