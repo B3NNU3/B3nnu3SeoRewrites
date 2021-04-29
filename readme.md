@@ -1,4 +1,4 @@
-#SEoRewrites
+#SEoRewrites - Shopware5 plugin
 
 Provides an input mask available for applying simple rewriteRules.
 
